@@ -1,0 +1,21 @@
+.searchBox {
+  display: flex;
+  align-items: center;
+  background-color: #ededed;
+  height: 37px;
+  border-radius: 4px;
+}
+.searchLogo{
+  width: 18px;
+  height: 18px;
+  padding-left: 20px;
+}
+
+.searchInput {
+  padding-left: 5px;
+  background-color: #ededed;
+  outline: none;
+  border: none;
+  font-size: 14px;
+  width: 100%;
+}
