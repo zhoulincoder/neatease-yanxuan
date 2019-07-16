@@ -66,13 +66,13 @@ module.exports = {
     // stats: 'error-only',
     open: true,
     disableHostCheck: true,
-    // proxy: {
-    //   //代理 转发/api请求， 给
-    //   '/api': {
-    //     target: "http://127.0.0.1:7002",
-    //     changeOrigin: true
-    //   }
-    // }
+    proxy: {
+      //代理 转发/api请求， 给
+      '/recommend': {
+        target: "http://127.0.0.1:7002",
+        changeOrigin: true
+      }
+    }
   },
   plugins: [
     new HtmlWebPackPlugin({

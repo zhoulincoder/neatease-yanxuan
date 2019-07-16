@@ -1,0 +1,17 @@
+.tabsWrapper{
+  height: 64px;
+  vertical-align: middle;
+}
+.tabs{
+  display: flex;
+  justify-content: space-around ;
+  align-items: center;
+}
+.tabItem {
+  vertical-align: middle;
+}
+.spriteIcon{
+  width: 23px;
+  height: 23px;
+  
+}
