@@ -1,0 +1,27 @@
+.tabsWrapper{
+  border-top: 1px solid #eeeeee;
+  height: 45px;
+  display: flex;
+  justify-content: space-around ;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+  width: 100%;
+}
+
+.tab-active{
+  color: #B4282D;
+}
+.tab-item-name {
+  text-align: center;
+  padding-bottom: 3px;
+}
+.tab-item-icon{
+  width: 19px;
+  height: 19px;
+  padding: 2px 12px
+}

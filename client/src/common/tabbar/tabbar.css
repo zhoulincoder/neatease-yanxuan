@@ -1,28 +1,36 @@
 .tabbar{
-  height: 36px;
+  box-sizing: border-box;
+  height: 32px;
   overflow-x: scroll;
   overflow-y: hidden;
 }
-.tabsList{
+.tabs-list{
   display: flex;
   overflow-y: hidden;
-  padding-bottom: 10px; 
+  padding-bottom: 8px; 
+  /* 增大可隐藏滚动条 */
 }
-.tabsItem{
+.tabs-item,.tabs-item_active{
   display: inline-block;
   box-sizing: border-box;
-  line-height: 33px;
   margin-left: 5px; 
-  background:rgba(255,255,255,1);
 }
-.tabsText{
-  display: inline-block;
-  padding: 0 6px;
-  font-size: 16px;
-  text-align: center;
-  white-space:nowrap;
-}
-.tabsItem:active{
+.tabs-item_active{
   color: #B4282D;
-  border-bottom: 1px solid #B4282D;
+  border-bottom: 2px solid #B4282D;
 }
+.nav-link{
+  display: block;
+  /* color: inherit; */
+  text-decoration: none;
+  /* text-align: center; */
+}
+.tabs-text{
+  line-height: 25px;
+  display: inline-block;
+  padding: 0 10px;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 14px;
+}
+

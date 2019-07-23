@@ -1,0 +1,23 @@
+.quality-wrapper{
+  background-color: #fff;
+  width: 100%;
+  height: 32px;
+  display: flex;
+  padding: 0 10px;
+  align-items: center;
+  box-sizing: border-box;
+  justify-content: space-between;              
+}
+.quality-item{
+  display: flex;
+  align-items: center;
+}
+.quality-icon{
+  width: 15px;
+  height: 15px;
+}
+.quality-title{
+  padding: 3px 0px 3px 3px;
+  height: 14px;
+  line-height: 14px;
+}

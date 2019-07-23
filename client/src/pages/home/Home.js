@@ -1,46 +1,61 @@
 import React, { Component } from 'react';
 import TabBar from '@common/tabbar/index';
 import SearchBox from '@common/searchbox/index';
-import Swiper from '@common/swiper/index';
-import BottomBar from '@common/bottombar/index';
+import MySwiper from '@common/swiper/index';
+import Scroll from '@common/scroll/index';
+import Quality from '@common/quality/index'
+import RecOptions from '@components/recoptions/index'
+import NewDisc from '@components/newdiscount/index'
 import axios from 'axios';
 import './home.css';
 class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      tabsList: ['推荐', '居家生活', '服饰鞋包', '美食酒水', '个护清洁', '母婴亲子', '运动旅行', '数码家电', '全球特色'],
-      swiperImg: []
+      tabsList: [],
+      swiperImg: [],
+      recommendIcon: []
     }
   }
   componentDidMount() {
+    console.log('componentDidMount');
     axios
-      .get('/recommend')
-      .then(data => {
-        console.log(data);
-        const { swiperImg } = data.data
-        console.log(swiperImg);
-    
+      .get('/homepage')
+      .then(res => {
+        const { swiperImg, tabsList, recommendIcon } = res.data
+        console.log('请求数据了');
         this.setState({
           swiperImg,
+          recommendIcon,
+          tabsList
         })
       })
   }
   render() {
+    const { swiperImg, tabsList, recommendIcon } = this.state
     return (
       <div className="homePage">
-        <div className="headWrapper">
-          <div className="textLogo">
-            <img src="http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/indexLogo-11d65342f9.png" alt=""
-              width="100%" height="100%" />
+        <div className="pageTop">
+          <div className="headWrapper">
+            <div className="textLogo">
+              <img src="http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/indexLogo-11d65342f9.png" alt=""
+                width="100%" height="100%" />
+            </div>
+            <div className="homeSearch"><SearchBox /></div>
+            <div className="handleLogin">登录</div>
           </div>
-          <div className="homeSearch"><SearchBox /></div>
-          <div className="handleLogin">登录</div>
+          <TabBar tabsList={tabsList} />
         </div>
-        <TabBar tabsList={this.state.tabsList} />
-        {/* <Swiper swiperImg={this.state.swiperImg} /> */}
-        <div className="goods"></div>
-        <BottomBar className="BottomBar" />
+        <Scroll >
+          {/* 这里要以推荐，居家生活等做单独的组件 */}
+          <div className="pageContent">
+            <MySwiper swiperImg={swiperImg} />
+            <Quality />
+            <RecOptions recommendIcon={recommendIcon} />
+            <NewDisc />
+          </div>
+        </Scroll>
+
       </div>
     );
   }

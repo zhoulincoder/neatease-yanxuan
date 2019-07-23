@@ -1,0 +1,93 @@
+.news-discount{
+  padding: 10px;
+  position: relative;
+  margin-top:10px;
+  background-color: #fff;
+  overflow: hidden;
+}
+.news-title{
+  text-align: center;
+  font-size: 16px;
+  padding-bottom: 10px; 
+  margin: 0 auto;
+}
+.welfare-left {
+  width: 172px;
+  height: 220px;
+  background-color: #f9e9cf;
+  position: relative;
+  float: left;
+}
+.welfare-left .title{
+  font-size: 16px;
+  position: absolute;
+  left: 10px;
+  top: 15px;
+}
+.welfare-left .left-bg{
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 60%;
+  left: 50%;
+  width: 120px;
+  height: 140px;
+}
+.welfare-top{
+  width: 180px;
+  height: 108px;
+  background-color: #fbe2d3;
+  float: right;
+  position: relative;
+}
+.top-bg{  
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 70%;
+  width: 90px;
+  height: 90px;
+}
+.active-item{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  background-color: #f7a644;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+}
+.item-sub {
+  font-size: 10px;
+  text-decoration: line-through; 
+}
+.item-mai{
+  margin-top: 6px;
+}
+.top-title{
+  padding-top: 15px;
+  padding-left: 18px;
+}
+.top-matitle{
+  font-size: 15px;
+}
+.top-subtitle{
+  color: #9c9692;
+}
+.bot-subtitle{
+  color: white;
+  background-color: #cbb693;
+  display: inline-block;
+  border-radius: 4px;
+  /* vertical-align: middle; */
+  padding: 0 4px 2px 4px;
+}
+.welfare-bot{
+  width: 180px;
+  height: 108px;
+  margin-top: 4px;
+  background-color: #ffecc2;
+  float: right;
+  position: relative;
+}

@@ -1,0 +1,22 @@
+.rec-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.rec-item{
+  padding: 0px 4px 8px 4px;
+  vertical-align: middle;
+}
+.rec-icon{
+  width: 55px;
+  height: 55px;
+}
+.rec-title{
+  padding-top: 8px; 
+  text-align: center;
+
+}

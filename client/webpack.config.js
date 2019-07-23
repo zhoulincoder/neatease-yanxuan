@@ -68,8 +68,12 @@ module.exports = {
     disableHostCheck: true,
     proxy: {
       //代理 转发/api请求， 给
-      '/recommend': {
-        target: "http://127.0.0.1:7002",
+      '/homepage': {
+        target: "http://127.0.0.1:7001",
+        changeOrigin: true
+      },
+      '/categorypage': {
+        target: "http://127.0.0.1:7001",
         changeOrigin: true
       }
     }
