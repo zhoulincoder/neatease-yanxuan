@@ -1,0 +1,31 @@
+.brand-sales{
+  padding: 10px;
+  position: relative;
+  margin-top:10px;
+  background-color: #fff;
+  overflow: hidden;
+}
+.wrapper-brand{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.sales-item{
+  display: flex;
+  padding: 0 2px 3px 0;
+}
+.sales-item .float-title{
+  
+}
+.sales-item .sales-maintitle{
+  font-size: 15px;
+  text-align: center;
+}
+.sales-item .sales-subtitle{
+  font-size: 12px;
+  text-align: center;
+}
+.sales-item img{
+  width: 175px;
+  height: 127px;
+}

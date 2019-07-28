@@ -6,6 +6,7 @@ import Scroll from '@common/scroll/index';
 import Quality from '@common/quality/index'
 import RecOptions from '@components/recoptions/index'
 import NewDisc from '@components/newdiscount/index'
+import BrandSales from '@components/brandsales/index'
 import axios from 'axios';
 import './home.css';
 class Home extends Component {
@@ -14,7 +15,8 @@ class Home extends Component {
     this.state = {
       tabsList: [],
       swiperImg: [],
-      recommendIcon: []
+      recommendIcon: [],
+      directSales: []
     }
   }
   componentDidMount() {
@@ -22,17 +24,18 @@ class Home extends Component {
     axios
       .get('/homepage')
       .then(res => {
-        const { swiperImg, tabsList, recommendIcon } = res.data
+        const { swiperImg, tabsList, recommendIcon, directSales } = res.data
         console.log('请求数据了');
         this.setState({
           swiperImg,
           recommendIcon,
-          tabsList
+          tabsList,
+          directSales
         })
       })
   }
   render() {
-    const { swiperImg, tabsList, recommendIcon } = this.state
+    const { swiperImg, tabsList, recommendIcon, directSales } = this.state
     return (
       <div className="homePage">
         <div className="pageTop">
@@ -53,6 +56,7 @@ class Home extends Component {
             <Quality />
             <RecOptions recommendIcon={recommendIcon} />
             <NewDisc />
+            <BrandSales directSales={directSales}/>
           </div>
         </Scroll>
 

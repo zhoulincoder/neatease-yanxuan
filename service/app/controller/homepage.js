@@ -5,6 +5,28 @@ const Controller = require('egg').Controller;
 class HomeController extends Controller {
   async imgList() {
     const result = {
+      directSales:[
+        {
+          mainTitle: '海外制造商',
+          subTitle: '9.9元起',
+          bgImg: 'http://yanxuan.nosdn.127.net/74e2ea8f81004d0a60f90fc8e4649058.png?imageView&thumbnail=343y260&enlarge=1'
+        },
+        {
+          mainTitle: 'CK制造商',
+          subTitle: '29.9元起',
+          bgImg: 'http://yanxuan.nosdn.127.net/c097be14110f769d58245cdad73e15c3.png?imageView&thumbnail=343y260&enlarge=1'
+        },
+        {
+          mainTitle: '新秀丽制造商',
+          subTitle: '169.9元起',
+          bgImg: 'http://yanxuan.nosdn.127.net/66a23d776f41cba70d00803a5231124b.png?imageView&thumbnail=343y260&enlarge=1'
+        },
+        {
+          mainTitle: 'Nine West制造商',
+          subTitle: '219元起',
+          bgImg: 'http://yanxuan.nosdn.127.net/3bf5a8a2f6eef284ecb40806ae9ce043.png?imageView&thumbnail=343y260&enlarge=1'
+        }
+      ],
       tabsList: [
         {
           tabName:'推荐',
